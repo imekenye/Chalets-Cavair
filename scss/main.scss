@@ -147,9 +147,9 @@ a {
       }
     }
     &__button {
-      width: 341px;
+      width: 194px;
       background-color: $color-secondary;
-      height: 58px;
+      height: 48px;
       border: none;
       @include media('<=tablet') {
         width: 200px;
@@ -348,8 +348,8 @@ a {
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 132px;
-          height: 56px;
+          width: 128px;
+          height: 40px;
           background: #edcb9b;
           a {
             font-size: 16px;
@@ -359,8 +359,8 @@ a {
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 132px;
-          height: 56px;
+          width: 128px;
+          height: 40px;
           border: 1px solid $color-secondary;
           a {
             font-size: 16px;
@@ -445,8 +445,8 @@ a {
       }
       button {
         margin-top: 46px;
-        height: 72px;
-        width: 50%;
+        height: 48px;
+        width: 217px;
         border: none;
         background-color: $color-secondary;
         font-size: 16px;
@@ -977,8 +977,8 @@ a {
       grid-row: 4/5;
       width: 80%;
       margin: 0 auto;
-      width: 360px;
-      height: 72px;
+      width: 160px;
+      height: 48px;
       border: none;
       background-color: $color-secondary;
       font-size: 16px;

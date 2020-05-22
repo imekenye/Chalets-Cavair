@@ -127,9 +127,9 @@ a {
         .hero-left__specs {
           font-size: 16px; } }
     .hero-left__button {
-      width: 341px;
+      width: 194px;
       background-color: #edcb9b;
-      height: 58px;
+      height: 48px;
       border: none; }
       @media (max-width: 768px) {
         .hero-left__button {
@@ -306,8 +306,8 @@ a {
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 132px;
-          height: 56px;
+          width: 128px;
+          height: 40px;
           background: #edcb9b; }
           .search-form__right .form-nav__forsale a {
             font-size: 16px; }
@@ -315,8 +315,8 @@ a {
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 132px;
-          height: 56px;
+          width: 128px;
+          height: 40px;
           border: 1px solid #edcb9b; }
           .search-form__right .form-nav__forrent a {
             font-size: 16px; }
@@ -382,8 +382,8 @@ a {
           background-color: rgba(0, 0, 0, 0.1); }
       .search-form__right .form button {
         margin-top: 46px;
-        height: 72px;
-        width: 50%;
+        height: 48px;
+        width: 217px;
         border: none;
         background-color: #edcb9b;
         font-size: 16px; }
@@ -806,8 +806,8 @@ a {
       grid-row: 4/5;
       width: 80%;
       margin: 0 auto;
-      width: 360px;
-      height: 72px;
+      width: 160px;
+      height: 48px;
       border: none;
       background-color: #edcb9b;
       font-size: 16px; }
