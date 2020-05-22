@@ -73,7 +73,21 @@ a {
       font-size: 16px;
       text-transform: uppercase;
       font-weight: 400;
-      font-family: 'Spectral', serif; }
+      font-family: 'Spectral', serif;
+      position: relative; }
+      .nav-menu-item-link::after {
+        content: '';
+        height: 10px;
+        width: 0%;
+        background: #edcb9b;
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        z-index: -1;
+        transition: all 0.3s ease-out; }
+      .nav-menu-item-link:hover::after {
+        content: '';
+        width: 100%; }
 
 .hero {
   display: grid;
