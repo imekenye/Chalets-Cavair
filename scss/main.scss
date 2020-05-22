@@ -170,6 +170,10 @@ a {
       background-color: $color-secondary;
       height: 48px;
       border: none;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: darken($color: #edcb9b, $amount: 10);
+      }
       @include media('<=tablet') {
         width: 200px;
       }
@@ -371,6 +375,7 @@ a {
           height: 40px;
           background: #edcb9b;
           a {
+            color: $color-primary;
             font-size: 16px;
           }
         }
@@ -469,6 +474,11 @@ a {
         border: none;
         background-color: $color-secondary;
         font-size: 16px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          background-color: darken($color: $color-secondary, $amount: 10);
+        }
       }
     }
   }
@@ -1001,6 +1011,11 @@ a {
       border: none;
       background-color: $color-secondary;
       font-size: 16px;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        background-color: darken($color: $color-secondary, $amount: 10);
+      }
       @include media('<=phone') {
         grid-column: 1/2;
         grid-row: 5/6;

@@ -144,7 +144,10 @@ a {
       width: 194px;
       background-color: #edcb9b;
       height: 48px;
-      border: none; }
+      border: none;
+      transition: all 0.3s ease-in-out; }
+      .hero-left__button:hover {
+        background-color: #e5b570; }
       @media (max-width: 768px) {
         .hero-left__button {
           width: 200px; } }
@@ -324,6 +327,7 @@ a {
           height: 40px;
           background: #edcb9b; }
           .search-form__right .form-nav__forsale a {
+            color: #24272e;
             font-size: 16px; }
         .search-form__right .form-nav__forrent {
           display: flex;
@@ -400,7 +404,11 @@ a {
         width: 217px;
         border: none;
         background-color: #edcb9b;
-        font-size: 16px; }
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer; }
+        .search-form__right .form button:hover {
+          background-color: #e5b570; }
 
 .form-range {
   /* General Rules For Range Slider */
@@ -824,7 +832,11 @@ a {
       height: 48px;
       border: none;
       background-color: #edcb9b;
-      font-size: 16px; }
+      font-size: 16px;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer; }
+      .contact-form form button:hover {
+        background-color: #e5b570; }
       @media (max-width: 360px) {
         .contact-form form button {
           grid-column: 1/2;
