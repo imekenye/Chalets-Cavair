@@ -1,0 +1,1104 @@
+@import 'abstract/functions';
+@import 'abstract/mixins';
+@import 'abstract/variables';
+
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'pages/home';
+@import 'layout/header';
+@import 'layout/breakpoints';
+
+@import url('https://fonts.googleapis.com/css?family=Open + Sans:700, 300');
+
+// BASE STYLES
+
+a {
+  text-decoration: none;
+  color: white;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.container-fluid {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.space-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.center {
+  align-items: center;
+  justify-content: center;
+}
+.h-100 {
+  height: 100%;
+}
+
+// HEADER
+
+.nav {
+  height: 86px;
+  background-color: #24272ef3;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  @include media('<=phone') {
+    height: 43px;
+  }
+  .logo {
+    @include media('<=phone') {
+      height: 25px;
+    }
+  }
+
+  &-menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    list-style-type: none;
+    @include media('<=phone') {
+      display: none;
+    }
+    &-item {
+      &:not(:first-child) {
+        margin-left: 50px;
+      }
+      &-link {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-family: 'Spectral', serif;
+      }
+    }
+  }
+}
+
+// HERO SECTION
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: $color-primary;
+  height: 60%;
+  position: relative;
+  padding-top: 86px;
+  @include media('<=phone') {
+    font-size: 40px;
+    grid-template-columns: 1fr;
+  }
+  @include media('<=phone') {
+    padding-top: 43px;
+  }
+
+  &-left {
+    grid-column: 1/2;
+    height: 60vh;
+    background-color: $color-primary;
+    @include media('<=tablet', '<=medium') {
+      position: absolute;
+      left: 0;
+      height: 60vh;
+      bottom: 0rem;
+      width: 341px;
+      background-color: #24272ee3;
+    }
+    @include media('<=phone') {
+      width: 100%;
+    }
+    &__heading {
+      font-size: 50px;
+      font-weight: 300;
+      font-family: 'Spectral', serif;
+      color: white;
+      @include media('<=tablet') {
+        font-size: 40px;
+      }
+    }
+    &__location {
+      p {
+        font-size: 24px;
+        color: $color-secondary;
+        margin-left: 10px;
+        @include media('<=tablet') {
+          font-size: 14px;
+        }
+      }
+    }
+    &__specs {
+      font-size: 24px;
+      color: white;
+      margin-bottom: 42px;
+      @include media('<=tablet') {
+        font-size: 16px;
+      }
+    }
+    &__button {
+      width: 341px;
+      background-color: $color-secondary;
+      height: 58px;
+      border: none;
+      @include media('<=tablet') {
+        width: 200px;
+      }
+      a {
+        color: $color-primary;
+        font-size: 16px;
+      }
+    }
+  }
+  &-right {
+    grid-column: 2/3;
+    width: 100%;
+    height: 100%;
+    @include media('<=tablet') {
+      grid-column: 1/3;
+      height: 60vh;
+    }
+    &__image {
+      width: inherit;
+      height: inherit;
+      background: url('/images/hero-image.png'), no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+// GALLERY
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 23rem;
+  grid-gap: 2%;
+  padding: 1% 0;
+  @include media('<=tablet') {
+    height: 15rem;
+    padding: 1.5%;
+  }
+  @include media('<=phone') {
+    height: 10rem;
+    padding: 1.5%;
+  }
+
+  &-image__one {
+    background: url('/images/gallery-image-1.png') no-repeat;
+    background-size: cover;
+  }
+  &-image__two {
+    background: url('/images/gallery-image-2.png') no-repeat;
+    background-size: cover;
+  }
+  &-image__three {
+    background: url('/images/gallery-image-3.png') no-repeat;
+    background-size: cover;
+  }
+  &-image__four {
+    background: url('/images/gallery-image-4.png') no-repeat;
+    background-size: cover;
+  }
+}
+
+// FORM SECTION
+
+.search-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100vh;
+  position: relative;
+  &__left-top {
+    background: url('/images/form-image.png');
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    @include media('<=tablet') {
+      grid-column: 1/3;
+    }
+  }
+  &__left-bottom {
+    padding-top: 10%;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding-left: 20%;
+    position: relative;
+    background-color: #f1f2f4;
+    height: 100%;
+    width: 100%;
+    @include media('<=tablet') {
+      padding-left: 5%;
+      grid-column: 1/3;
+    }
+    @include media('<=phone') {
+      background: white;
+    }
+    span {
+      position: absolute;
+      font-family: Spectral-Bold;
+      font-weight: 600;
+      display: block;
+      width: 50%;
+      height: 100%;
+      font-size: 50px;
+      color: #24272e;
+      line-height: 55px;
+      z-index: 2;
+      @include media('<=tablet') {
+        width: 25%;
+        top: 60px;
+        font-size: 30px;
+        line-height: 35px;
+      }
+      @include media('<=1074px') {
+        width: 35%;
+        top: 60px;
+        font-size: 40px;
+        line-height: 35px;
+      }
+      @include media('<=768px') {
+        display: none;
+      }
+      @include media('<=phone') {
+        display: none;
+      }
+    }
+    .rect {
+      position: absolute;
+      left: 20%;
+      top: 40%;
+      width: 168px;
+      height: 34px;
+      background-color: $color-secondary;
+      z-index: 1;
+      @include media('<=tablet') {
+        width: 160px;
+        top: 30%;
+        left: 5%;
+      }
+      @include media('<=768px') {
+        display: none;
+      }
+      @include media('<=phone') {
+        display: none;
+      }
+    }
+  }
+  &__right {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    background-color: $color-primary;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    @include media('<=tablet') {
+      position: absolute;
+      background-color: #24272ef1;
+      padding: 5rem 0;
+      height: 90%;
+      width: 130%;
+      right: 30px;
+      top: 30px;
+    }
+    @include media('<=1074px') {
+      position: absolute;
+      background-color: #24272ef1;
+      padding: 5rem 0;
+      height: 90%;
+      width: 130%;
+      right: 30px;
+      top: 30px;
+    }
+    @include media('<=phone') {
+      grid-column: 1/3;
+      grid-row: 1/3;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      width: 100%;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+
+      &-nav {
+        display: flex;
+        margin-bottom: 46px;
+        &__forsale {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 132px;
+          height: 56px;
+          background: #edcb9b;
+          a {
+            font-size: 16px;
+          }
+        }
+        &__forrent {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 132px;
+          height: 56px;
+          border: 1px solid $color-secondary;
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+
+      &-select {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 8%;
+        justify-items: center;
+        align-items: center;
+        width: 60%;
+        &__baths {
+          width: 100%;
+        }
+        &__beds {
+          width: 100%;
+        }
+        .custom-select {
+          position: relative;
+          border: 1px solid $color-secondary;
+          border-color: $color-secondary;
+          select {
+            display: none;
+          }
+        }
+        .select-selected {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          height: 72px;
+          font-size: 16px;
+          @include media('<=tablet') {
+            height: 62px;
+          }
+          &::after {
+            position: absolute;
+            content: '';
+            top: 35px;
+            right: 10px;
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+            border-color: #fff transparent transparent transparent;
+            @include media('<=tablet') {
+              top: 28px;
+            }
+          }
+          .select-arrow-active::after {
+            border-color: transparent transparent #fff transparent;
+            top: 7px;
+          }
+        }
+        .select-items div,
+        .select-selected {
+          color: #ffffff;
+          padding: 8px 16px;
+          border: 1px solid transparent;
+          border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+          cursor: pointer;
+        }
+
+        .select-items {
+          position: absolute;
+          background-color: $color-secondary;
+          top: 100%;
+          left: 0;
+          right: 0;
+          z-index: 99;
+        }
+
+        .select-hide {
+          display: none;
+        }
+
+        .select-items div:hover,
+        .same-as-selected {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+      }
+      button {
+        margin-top: 46px;
+        height: 72px;
+        width: 50%;
+        border: none;
+        background-color: $color-secondary;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// RANGE STYLES
+
+.form-range {
+  /* General Rules For Range Slider */
+  margin-top: 48px;
+  width: 70%;
+  .custom-rangeslider {
+    position: relative;
+    margin-top: 40px;
+    padding: 0;
+  }
+
+  // ----- Variables -----
+
+  // Range Slider
+  $range-height: 50px;
+  $range-background-color: transparent; // Test
+
+  // Thumb
+  $thumb-background-color: #21324f; // Test
+  $thumb-border: 2px solid #ffffff;
+  $thumb-height: 20px;
+  $thumb-width: 20px;
+  $thumb-border-radius: 50%; // Circle
+
+  // Track
+  $track-height: 5px;
+  $track-background-color: $color-secondary;
+
+  // Tool Tip
+  $tool-tip-border: 1px $color-secondary solid;
+  $tool-tip-border-arrow: $tool-tip-border;
+
+  // ----- Mixins -----
+
+  // Cursor
+  @mixin cursorGrab {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    &:active {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing;
+    }
+  }
+
+  // Range Track
+  @mixin rangeTrack {
+    appearance: none; // Reset Appearance
+    box-sizing: border-box; // Border need to be inset
+    height: $track-height;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: grey;
+  }
+
+  @mixin rangeTrackFocus {
+    // background: yellow; // Test
+  }
+
+  // Range Thumb
+  @mixin rangeThumb {
+    appearance: none; // Reset Appearance
+    box-sizing: border-box; // Border need to be inset
+    background-color: $color-secondary;
+    //border: $thumb-border;
+    // outline: $thumb-border;
+    width: $thumb-width;
+    height: $thumb-height;
+    border: none;
+    border-radius: $thumb-border-radius;
+    background: #f0f2f3;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    @include cursorGrab; // Optional
+  }
+
+  @mixin unSelectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  @mixin avoidClicks {
+    pointer-events: none;
+  }
+
+  // ----- Style -----
+
+  .custom-rangeInput {
+    width: 100%;
+    background: transparent;
+    appearance: none; // Reset Appearance
+    box-sizing: border-box; // Border need to be inset
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    // background-color: $color-secondary;
+    height: $range-height;
+
+    // Thumb
+    &::-webkit-slider-thumb {
+      @include rangeThumb;
+      margin-top: -8px;
+    } // Webkit
+    &::-moz-range-thumb {
+      @include rangeThumb;
+    } // Mozilla
+    &::-ms-thumb {
+      @include rangeThumb;
+      margin: auto;
+    } // IE
+
+    // Track
+    &::-webkit-slider-runnable-track {
+      @include rangeTrack;
+    }
+    &::-moz-range-track {
+      @include rangeTrack;
+    }
+    &::-ms-track {
+      @include rangeTrack;
+      color: transparent;
+      border: none;
+      outline: none;
+    }
+
+    // ----- States -----
+
+    &:focus,
+    &:active {
+      outline: none; // Removes the blue border.
+      &::-webkit-slider-runnable-track {
+        @include rangeTrackFocus;
+      }
+      &::-moz-range-track {
+        @include rangeTrackFocus;
+      }
+      &::-ms-track {
+        @include rangeTrackFocus;
+      }
+    }
+
+    &::-ms-tooltip {
+      display: none;
+    }
+  }
+
+  // Tooltip
+  .custom-rangeslider__tooltip {
+    line-height: 20px;
+    position: absolute;
+    height: 40px;
+    width: 80px;
+    font-size: 16px;
+    color: $color-primary;
+    background-color: $color-secondary;
+    padding: 3px 3px;
+    border: $tool-tip-border;
+    top: -40px;
+    left: 0;
+    text-align: center;
+    transform: translate(-26%, 0);
+    border-radius: 3px;
+
+    @include unSelectable;
+    @include avoidClicks;
+
+    &:after {
+      display: block;
+      content: ' ';
+      background: $color-secondary;
+      position: absolute;
+      border: $tool-tip-border-arrow;
+      border-top: 0;
+      border-left: 0;
+      width: 10px;
+      height: 10px;
+      left: calc(50% - 6px);
+      bottom: -6px;
+      transform: rotate(45deg);
+    }
+  }
+  .custom-rangeslider {
+    label {
+      color: white;
+      font-size: 14px;
+    }
+  }
+
+  .custom-rangeslider__label {
+    width: 100%;
+    font-size: 12px;
+    display: block;
+
+    span {
+      display: block;
+    }
+    &-min {
+      float: left;
+    }
+    &-max {
+      float: right;
+    }
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+// FEATURED SECTION
+
+.featured {
+  padding-bottom: 100px;
+  &-heading {
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 66px 0;
+
+    .rect-featured {
+      position: absolute;
+      left: 52.5%;
+      bottom: 36%;
+      background-color: $color-secondary;
+      width: 124px;
+      height: 31px;
+      z-index: -1;
+    }
+    h1 {
+      font-family: Spectral-Bold;
+      font-size: 41px;
+      color: #24272e;
+    }
+  }
+
+  &-chalets {
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+    height: 100%;
+    @include media('<=tablet') {
+      height: 100%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    @include media('<=960px') {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    @include media('<=phone') {
+      grid-template-rows: auto;
+    }
+
+    &-left {
+      grid-column: 1/2;
+      width: 100%;
+      position: relative;
+      @include media('<=phone') {
+        display: none;
+      }
+      @include media('<=960px') {
+        grid-column: 1/3;
+        grid-row: 1/2;
+      }
+      @include media('<=478px') {
+        display: none;
+      }
+
+      &__image {
+        width: 100%;
+        height: 100%;
+        background: url('/images/featured-image-main.png') no-repeat;
+        background-size: cover;
+      }
+      &__body {
+        width: 360px;
+        height: 242px;
+        padding: 72px;
+        background: #24272ede;
+        position: absolute;
+        bottom: 0;
+        .price {
+          font-family: 'Spectral', serif;
+          font-weight: 700;
+          font-size: 3.4rem;
+          color: $color-secondary;
+        }
+        h3 {
+          font-family: 'Spectral', serif;
+          font-weight: 600;
+          font-size: 2rem;
+          color: white;
+        }
+        p {
+          font-size: 1.4rem;
+          color: $color-secondary;
+          letter-spacing: 0.2px;
+        }
+        span {
+          font-size: 1.4rem;
+          color: white;
+        }
+      }
+    }
+
+    &-right {
+      display: grid;
+      grid-gap: 24px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      @include media('<=phone') {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+      @include media('<=960px') {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column: 1/3;
+        grid-row: 2/3;
+      }
+      @include media('<=478px') {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+      &-card {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: $color-primary;
+
+        &__image {
+          height: 184px;
+          position: relative;
+          .img-overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(
+              180deg,
+              rgba(36, 39, 46, 0) 0%,
+              #24272e 100%
+            );
+          }
+          .f-img-1 {
+            width: 100%;
+            height: inherit;
+            background: url('/images/featured-image-1.png') no-repeat;
+            background-size: cover;
+            background-position: center;
+          }
+          .f-img-2 {
+            width: 100%;
+            height: inherit;
+            background: url('/images/featured-image-2.png') no-repeat;
+            background-size: cover;
+            background-position: center;
+          }
+          .f-img-3 {
+            width: 100%;
+            height: inherit;
+            background: url('/images/featured-image-3.png') no-repeat;
+            background-size: cover;
+            background-position: center;
+          }
+          .f-img-4 {
+            width: 100%;
+            height: inherit;
+            background: url('/images/featured-image-4.png') no-repeat;
+            background-size: cover;
+            background-position: center;
+          }
+        }
+        &__body {
+          background: $color-primary;
+          height: 113px;
+          padding: 3rem;
+          h3 {
+            font-family: 'Spectral', serif;
+            font-size: 20px;
+            line-height: 1;
+            color: white;
+          }
+          p {
+            font-size: 1.2rem;
+            height: 22px;
+            overflow: hidden;
+            color: $color-secondary;
+          }
+          span {
+            color: white;
+            font-size: 1.2rem;
+          }
+        }
+        &__price {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          margin: 0 auto;
+          position: absolute;
+          top: 50%;
+          span {
+            font-size: 20px;
+            font-family: 'Spectral', serif;
+            color: white;
+            margin-left: 20px;
+          }
+          .tag {
+            width: 50%;
+            color: $color-secondary;
+            font-size: 14px;
+            text-align: center;
+            background-color: $color-grey-dark;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// CONTACT FORM SECTION
+
+.contact-form {
+  width: 100%;
+  height: 80%;
+  background: $color-primary;
+  padding: 4rem 0;
+  &__heading {
+    position: relative;
+    h3 {
+      display: block;
+      text-align: center;
+      font-family: 'Spectral', serif;
+      font-size: 34px;
+      color: white;
+      padding: 4rem 0;
+    }
+  }
+  form {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 68px 68px 1fr 72px;
+    @include media('<=phone') {
+      grid-template-columns: 1fr;
+      grid-template-rows: 68px 68px 68px 1fr 72px;
+    }
+    input {
+      background: transparent;
+      border: 1px solid $color-secondary;
+      padding-left: 20px;
+      &::placeholder {
+        color: white;
+        font-size: 16px;
+      }
+      .form-text {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        @include media('<=phone') {
+          grid-column: 1/2;
+        }
+      }
+    }
+    .form-email {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      @include media('<=phone') {
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+    }
+    .form-subject {
+      grid-column: 1/3;
+      grid-row: 2/3;
+      @include media('<=phone') {
+        grid-column: 1/2;
+        grid-row: 3/4;
+      }
+    }
+    textarea {
+      background: transparent;
+      border: 1px solid $color-secondary;
+      padding-left: 20px;
+      padding-top: 20px;
+      grid-column: 1/3;
+      grid-row: 3/4;
+      @include media('<=phone') {
+        grid-column: 1/2;
+        grid-row: 4/5;
+      }
+      &::placeholder {
+        color: white;
+      }
+    }
+    button {
+      grid-column: 1/3;
+      grid-row: 4/5;
+      width: 80%;
+      margin: 0 auto;
+      width: 360px;
+      height: 72px;
+      border: none;
+      background-color: $color-secondary;
+      font-size: 16px;
+      @include media('<=phone') {
+        grid-column: 1/2;
+        grid-row: 5/6;
+        width: 200px;
+      }
+    }
+  }
+}
+
+// FOOTER SECTION
+
+footer {
+  height: 146px;
+  background: $color-primary;
+  border-top: 1px solid $color-secondary;
+  .footer-wrapper {
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media('<=phone') {
+      flex-direction: column;
+      padding: 30px 0;
+    }
+    .footer-right {
+      font-size: 16px;
+      color: white;
+    }
+    .footer-left-location {
+      font-size: 16px;
+      color: white;
+    }
+  }
+}
+
+// FOR SALE SECTION
+.header {
+  background: $color-primary;
+  .listing-header {
+    padding-top: 84px;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    .header-overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        180deg,
+        rgba(36, 39, 46, 0) 0%,
+        #24272e 100%
+      );
+      h2 {
+        position: absolute;
+        left: 33%;
+        bottom: 20%;
+        font-size: 50px;
+        color: white;
+        font-family: 'Spectral', serif;
+        font-weight: 300;
+        text-align: center;
+        width: 35%;
+        border: 1px solid $color-secondary;
+        @include media('<=1074px') {
+          font-size: 40px;
+        }
+        @include media('<=860px') {
+          font-size: 30px;
+        }
+        @include media('<=648px') {
+          font-size: 20px;
+        }
+        @include media('<=648px') {
+          width: 50%;
+          left: 25%;
+        }
+        @include media('<=phone') {
+          left: 10%;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.listing-cards {
+  padding: 84px 0;
+  width: 90%;
+  margin: 0 auto;
+  grid-gap: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+
+  @include media('<=1074px') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include media('<=tablet') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media('<=468px') {
+    grid-template-columns: 1fr;
+  }
+  @include media('<=phone') {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+// CONTACT FORM PAGE
+
+.contact-form-page {
+  padding-top: 20rem;
+}
