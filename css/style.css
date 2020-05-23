@@ -1,49 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Open + Sans:700, 300");
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-html {
-  font-size: 62.5%; }
-
-body {
-  font-family: 'Niramit', sans-serif;
-  line-height: 1.7;
-  box-sizing: border-box;
-  color: #5c5f6d; }
-
-a {
-  text-decoration: none;
-  color: white; }
-
-.container {
-  width: 90%;
-  margin: 0 auto; }
-
-.container-fluid {
-  width: 100%; }
-
-.flex {
-  display: flex; }
-
-.flex-column {
-  flex-direction: column; }
-
-.space-between {
-  justify-content: space-between; }
-
-.align-center {
-  align-items: center; }
-
-.center {
-  align-items: center;
-  justify-content: center; }
-
-.h-100 {
-  height: 100%; }
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@200;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Niramit:wght@300;400;700&display=swap");
+.wrapper {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
 
 .nav {
   height: 86px;
@@ -57,17 +18,17 @@ a {
   @media (max-width: 360px) {
     .nav .logo {
       height: 25px; } }
-  .nav-menu {
+  .nav__list {
     display: flex;
     align-items: center;
     height: 100%;
     list-style-type: none; }
     @media (max-width: 360px) {
-      .nav-menu {
+      .nav__list {
         display: none; } }
-    .nav-menu-item:not(:first-child) {
+    .nav__listItem:not(:first-child) {
       margin-left: 50px; }
-    .nav-menu-item-link {
+    .nav__listItemLink {
       text-decoration: none;
       color: white;
       font-size: 16px;
@@ -75,7 +36,7 @@ a {
       font-weight: 400;
       font-family: 'Spectral', serif;
       position: relative; }
-      .nav-menu-item-link::after {
+      .nav__listItemLink::after {
         content: '';
         height: 10px;
         width: 0%;
@@ -85,9 +46,195 @@ a {
         left: 0;
         z-index: -1;
         transition: all 0.3s ease-out; }
-      .nav-menu-item-link:hover::after {
+      .nav__listItemLink:hover::after {
         content: '';
         width: 100%; }
+
+footer {
+  height: 146px;
+  background: #24272e;
+  border-top: 1px solid #edcb9b; }
+  footer .footerWrapper {
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    @media (max-width: 360px) {
+      footer .footerWrapper {
+        flex-direction: column;
+        padding: 30px 0; } }
+    footer .footerWrapper .footer__right {
+      font-size: 16px;
+      color: white; }
+    footer .footerWrapper .footer__left-location {
+      font-size: 16px;
+      color: white; }
+
+.listing-cards {
+  padding: 84px 0;
+  width: 90%;
+  margin: 0 auto;
+  grid-gap: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto; }
+  @media (max-width: 1074px) {
+    .listing-cards {
+      grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 768px) {
+    .listing-cards {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 468px) {
+    .listing-cards {
+      grid-template-columns: 1fr; } }
+  @media (max-width: 360px) {
+    .listing-cards {
+      grid-template-columns: repeat(1, 1fr); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Niramit", sans-serif;
+  line-height: 1.7;
+  font-size: 16px;
+  box-sizing: border-box;
+  color: #5c5f6d; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+.containerWrapper {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.contact__form {
+  width: 100%;
+  height: 80%;
+  background-color: white;
+  padding: 2rem 0; }
+  .contact__form-heading {
+    position: relative; }
+    .contact__form-heading h3 {
+      display: block;
+      text-align: center;
+      font-family: 'Spectral', serif;
+      font-size: 34px;
+      color: white;
+      padding: 4rem 0; }
+  .contact__form form {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 68px 68px 1fr 72px; }
+    @media (max-width: 360px) {
+      .contact__form form {
+        grid-template-columns: 1fr;
+        grid-template-rows: 68px 68px 68px 1fr 72px; } }
+    .contact__form form input {
+      background: transparent;
+      border: 1px solid #24272e;
+      padding-left: 20px;
+      font-size: 16px; }
+      .contact__form form input::placeholder {
+        color: #24272e;
+        font-size: 16px; }
+      .contact__form form input:focus {
+        background-color: #edcb9b; }
+    .contact__form form .form__input-email {
+      grid-column: 2/3;
+      grid-row: 1/2; }
+      @media (max-width: 360px) {
+        .contact__form form .form__input-email {
+          grid-column: 1/2;
+          grid-row: 2/3; } }
+    .contact__form form .form__input-subject {
+      grid-column: 1/3;
+      grid-row: 2/3; }
+      @media (max-width: 360px) {
+        .contact__form form .form__input-subject {
+          grid-column: 1/2;
+          grid-row: 3/4; } }
+    .contact__form form .form__input-text {
+      grid-column: 1/2;
+      grid-row: 1/2; }
+      @media (max-width: 360px) {
+        .contact__form form .form__input-text {
+          grid-column: 1/2; } }
+    .contact__form form .form__input-textarea {
+      grid-column: 1/3;
+      grid-row: 3/4; }
+      @media (max-width: 360px) {
+        .contact__form form .form__input-textarea {
+          grid-column: 1/2;
+          grid-row: 4/5; } }
+    .contact__form form textarea {
+      background: transparent;
+      border: 1px solid #24272e;
+      padding-left: 20px;
+      padding-top: 20px; }
+      .contact__form form textarea::placeholder {
+        color: #24272e; }
+    .contact__form form button {
+      grid-column: 1/3;
+      grid-row: 4/5;
+      width: 80%;
+      margin: 0 auto;
+      width: 160px;
+      height: 48px;
+      border: none;
+      background-color: #edcb9b;
+      font-size: 16px;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer; }
+      .contact__form form button:hover {
+        background-color: #e5b570; }
+      @media (max-width: 360px) {
+        .contact__form form button {
+          grid-column: 1/2;
+          grid-row: 5/6;
+          width: 200px; } }
+
+.forsale__chalets {
+  padding: 84px 0;
+  width: 90%;
+  margin: 0 auto;
+  grid-gap: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto; }
+  @media (max-width: 1074px) {
+    .forsale__chalets {
+      grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 768px) {
+    .forsale__chalets {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 468px) {
+    .forsale__chalets {
+      grid-template-columns: 1fr; } }
+  @media (max-width: 360px) {
+    .forsale__chalets {
+      grid-template-columns: repeat(1, 1fr); } }
 
 .hero {
   display: grid;
@@ -103,12 +250,23 @@ a {
   @media (max-width: 360px) {
     .hero {
       padding-top: 43px; } }
-  .hero-left {
+  .hero__left {
     grid-column: 1/2;
     height: 60vh;
-    background-color: #24272e; }
+    background-color: #24272e;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
     @media (max-width: 768px) and (max-width: 1074px) {
-      .hero-left {
+      .hero__left {
         position: absolute;
         left: 0;
         height: 60vh;
@@ -116,53 +274,56 @@ a {
         width: 341px;
         background-color: #24272ee3; } }
     @media (max-width: 360px) {
-      .hero-left {
+      .hero__left {
         width: 100%; } }
-    .hero-left__heading {
+    .hero__left-heading {
       font-size: 50px;
       font-weight: 300;
       font-family: 'Spectral', serif;
       color: white; }
       @media (max-width: 768px) {
-        .hero-left__heading {
+        .hero__left-heading {
           font-size: 40px; } }
-    .hero-left__location p {
-      font-size: 24px;
-      color: #edcb9b;
-      margin-left: 10px; }
-      @media (max-width: 768px) {
-        .hero-left__location p {
-          font-size: 14px; } }
-    .hero-left__specs {
+    .hero__left-location {
+      display: flex;
+      align-items: center; }
+      .hero__left-location p {
+        font-size: 24px;
+        color: #edcb9b;
+        margin-left: 10px; }
+        @media (max-width: 768px) {
+          .hero__left-location p {
+            font-size: 14px; } }
+    .hero__left-specs {
       font-size: 24px;
       color: white;
       margin-bottom: 42px; }
       @media (max-width: 768px) {
-        .hero-left__specs {
+        .hero__left-specs {
           font-size: 16px; } }
-    .hero-left__button {
+    .hero__left-button {
       width: 194px;
       background-color: #edcb9b;
       height: 48px;
       border: none;
       transition: all 0.3s ease-in-out; }
-      .hero-left__button:hover {
+      .hero__left-button:hover {
         background-color: #e5b570; }
       @media (max-width: 768px) {
-        .hero-left__button {
+        .hero__left-button {
           width: 200px; } }
-      .hero-left__button a {
+      .hero__left-button a {
         color: #24272e;
         font-size: 16px; }
-  .hero-right {
+  .hero__right {
     grid-column: 2/3;
     width: 100%;
     height: 100%; }
     @media (max-width: 768px) {
-      .hero-right {
+      .hero__right {
         grid-column: 1/3;
         height: 60vh; } }
-    .hero-right__image {
+    .hero__right-image {
       width: inherit;
       height: inherit;
       background: url("/images/hero-image.png"), no-repeat;
@@ -182,16 +343,16 @@ a {
     .gallery {
       height: 10rem;
       padding: 1.5%; } }
-  .gallery-image__one {
+  .gallery__image-one {
     background: url("/images/gallery-image-1.png") no-repeat;
     background-size: cover; }
-  .gallery-image__two {
+  .gallery__image-two {
     background: url("/images/gallery-image-2.png") no-repeat;
     background-size: cover; }
-  .gallery-image__three {
+  .gallery__image-three {
     background: url("/images/gallery-image-3.png") no-repeat;
     background-size: cover; }
-  .gallery-image__four {
+  .gallery__image-four {
     background: url("/images/gallery-image-4.png") no-repeat;
     background-size: cover; }
 
@@ -410,6 +571,244 @@ a {
         .search-form__right .form button:hover {
           background-color: #e5b570; }
 
+.featured {
+  padding-bottom: 100px; }
+  .featured__heading {
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 66px 0; }
+    .featured__heading-rect {
+      position: absolute;
+      left: 52.5%;
+      bottom: 36%;
+      background-color: #edcb9b;
+      width: 124px;
+      height: 31px;
+      z-index: -1; }
+    .featured__heading h1 {
+      font-family: Spectral-Bold;
+      font-size: 41px;
+      color: #24272e; }
+  .featured__chalets {
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+    height: 100%; }
+    @media (max-width: 768px) {
+      .featured__chalets {
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr; } }
+    @media (max-width: 960px) {
+      .featured__chalets {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr; } }
+    @media (max-width: 360px) {
+      .featured__chalets {
+        grid-template-rows: auto; } }
+    .featured__chaletsLeft {
+      grid-column: 1/2;
+      width: 100%;
+      position: relative; }
+      @media (max-width: 360px) {
+        .featured__chaletsLeft {
+          display: none; } }
+      @media (max-width: 960px) {
+        .featured__chaletsLeft {
+          grid-column: 1/3;
+          grid-row: 1/2; } }
+      @media (max-width: 478px) {
+        .featured__chaletsLeft {
+          display: none; } }
+      .featured__chaletsLeft-image {
+        width: 100%;
+        height: 100%;
+        background: url("/images/featured-image-main.png") no-repeat;
+        background-size: cover; }
+      .featured__chaletsLeft-body {
+        width: 360px;
+        height: 242px;
+        padding: 72px;
+        background: #24272ede;
+        position: absolute;
+        bottom: 0; }
+        .featured__chaletsLeft-body .price {
+          font-family: 'Spectral', serif;
+          font-weight: 700;
+          font-size: 3.4rem;
+          color: #edcb9b; }
+        .featured__chaletsLeft-body h3 {
+          font-family: 'Spectral', serif;
+          font-weight: 600;
+          font-size: 2rem;
+          color: white; }
+        .featured__chaletsLeft-body p {
+          font-size: 1.4rem;
+          color: #edcb9b;
+          letter-spacing: 0.2px; }
+        .featured__chaletsLeft-body span {
+          font-size: 1.4rem;
+          color: white; }
+    .featured__chaletsRight {
+      display: grid;
+      grid-gap: 24px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr; }
+      @media (max-width: 360px) {
+        .featured__chaletsRight {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto; } }
+      @media (max-width: 960px) {
+        .featured__chaletsRight {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          grid-column: 1/3;
+          grid-row: 2/3; } }
+      @media (max-width: 478px) {
+        .featured__chaletsRight {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto; } }
+
+.header {
+  background: #24272e; }
+  .header .listing-header {
+    padding-top: 84px;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative; }
+    .header .listing-header .header-overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(180deg, rgba(36, 39, 46, 0) 0%, #24272e 100%); }
+      .header .listing-header .header-overlay h2 {
+        position: absolute;
+        left: 33%;
+        bottom: 20%;
+        font-size: 50px;
+        color: white;
+        font-family: 'Spectral', serif;
+        font-weight: 300;
+        text-align: center;
+        width: 35%;
+        border: 1px solid #edcb9b; }
+        @media (max-width: 1074px) {
+          .header .listing-header .header-overlay h2 {
+            font-size: 40px; } }
+        @media (max-width: 860px) {
+          .header .listing-header .header-overlay h2 {
+            font-size: 30px; } }
+        @media (max-width: 648px) {
+          .header .listing-header .header-overlay h2 {
+            font-size: 20px; } }
+        @media (max-width: 648px) {
+          .header .listing-header .header-overlay h2 {
+            width: 50%;
+            left: 25%; } }
+        @media (max-width: 360px) {
+          .header .listing-header .header-overlay h2 {
+            left: 10%; } }
+    .header .listing-header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+
+.enquiry__form {
+  width: 100%;
+  height: 80%;
+  background: #24272e;
+  padding: 4rem 0; }
+  .enquiry__form-heading {
+    position: relative; }
+    .enquiry__form-heading h3 {
+      display: block;
+      text-align: center;
+      font-family: 'Spectral', serif;
+      font-size: 34px;
+      color: white;
+      padding: 4rem 0; }
+  .enquiry__form form {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 68px 68px 1fr 72px; }
+    @media (max-width: 360px) {
+      .enquiry__form form {
+        grid-template-columns: 1fr;
+        grid-template-rows: 68px 68px 68px 1fr 72px; } }
+    .enquiry__form form input {
+      background: transparent;
+      border: 1px solid #edcb9b;
+      padding-left: 20px;
+      font-size: 16px; }
+      .enquiry__form form input::placeholder {
+        color: white;
+        font-size: 16px; }
+      .enquiry__form form input:focus {
+        background-color: #edcb9b; }
+    .enquiry__form form .form__input-email {
+      grid-column: 2/3;
+      grid-row: 1/2; }
+      @media (max-width: 360px) {
+        .enquiry__form form .form__input-email {
+          grid-column: 1/2;
+          grid-row: 2/3; } }
+    .enquiry__form form .form__input-subject {
+      grid-column: 1/3;
+      grid-row: 2/3; }
+      @media (max-width: 360px) {
+        .enquiry__form form .form__input-subject {
+          grid-column: 1/2;
+          grid-row: 3/4; } }
+    .enquiry__form form .form__input-text {
+      grid-column: 1/2;
+      grid-row: 1/2; }
+      @media (max-width: 360px) {
+        .enquiry__form form .form__input-text {
+          grid-column: 1/2; } }
+    .enquiry__form form .form__input-textarea {
+      grid-column: 1/3;
+      grid-row: 3/4; }
+      @media (max-width: 360px) {
+        .enquiry__form form .form__input-textarea {
+          grid-column: 1/2;
+          grid-row: 4/5; } }
+    .enquiry__form form textarea {
+      background: transparent;
+      border: 1px solid #edcb9b;
+      padding-left: 20px;
+      padding-top: 20px; }
+      .enquiry__form form textarea::placeholder {
+        color: white; }
+    .enquiry__form form button {
+      grid-column: 1/3;
+      grid-row: 4/5;
+      width: 80%;
+      margin: 0 auto;
+      width: 160px;
+      height: 48px;
+      border: none;
+      background-color: #edcb9b;
+      font-size: 16px;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer; }
+      .enquiry__form form button:hover {
+        background-color: #e5b570; }
+      @media (max-width: 360px) {
+        .enquiry__form form button {
+          grid-column: 1/2;
+          grid-row: 5/6;
+          width: 200px; } }
+
 .form-range {
   /* General Rules For Range Slider */
   margin-top: 48px;
@@ -579,358 +978,82 @@ a {
       display: table;
       clear: both; }
 
-.featured {
-  padding-bottom: 100px; }
-  .featured-heading {
-    position: relative;
-    display: block;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-    padding: 66px 0; }
-    .featured-heading .rect-featured {
-      position: absolute;
-      left: 52.5%;
-      bottom: 36%;
-      background-color: #edcb9b;
-      width: 124px;
-      height: 31px;
-      z-index: -1; }
-    .featured-heading h1 {
-      font-family: Spectral-Bold;
-      font-size: 41px;
-      color: #24272e; }
-  .featured-chalets {
-    display: grid;
-    width: 90%;
-    margin: 0 auto;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 24px;
-    height: 100%; }
-    @media (max-width: 768px) {
-      .featured-chalets {
-        height: 100%;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr; } }
-    @media (max-width: 960px) {
-      .featured-chalets {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr; } }
-    @media (max-width: 360px) {
-      .featured-chalets {
-        grid-template-rows: auto; } }
-    .featured-chalets-left {
-      grid-column: 1/2;
-      width: 100%;
-      position: relative; }
-      @media (max-width: 360px) {
-        .featured-chalets-left {
-          display: none; } }
-      @media (max-width: 960px) {
-        .featured-chalets-left {
-          grid-column: 1/3;
-          grid-row: 1/2; } }
-      @media (max-width: 478px) {
-        .featured-chalets-left {
-          display: none; } }
-      .featured-chalets-left__image {
-        width: 100%;
-        height: 100%;
-        background: url("/images/featured-image-main.png") no-repeat;
-        background-size: cover; }
-      .featured-chalets-left__body {
-        width: 360px;
-        height: 242px;
-        padding: 72px;
-        background: #24272ede;
-        position: absolute;
-        bottom: 0; }
-        .featured-chalets-left__body .price {
-          font-family: 'Spectral', serif;
-          font-weight: 700;
-          font-size: 3.4rem;
-          color: #edcb9b; }
-        .featured-chalets-left__body h3 {
-          font-family: 'Spectral', serif;
-          font-weight: 600;
-          font-size: 2rem;
-          color: white; }
-        .featured-chalets-left__body p {
-          font-size: 1.4rem;
-          color: #edcb9b;
-          letter-spacing: 0.2px; }
-        .featured-chalets-left__body span {
-          font-size: 1.4rem;
-          color: white; }
-    .featured-chalets-right {
-      display: grid;
-      grid-gap: 24px;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr; }
-      @media (max-width: 360px) {
-        .featured-chalets-right {
-          grid-template-columns: 1fr;
-          grid-template-rows: auto; } }
-      @media (max-width: 960px) {
-        .featured-chalets-right {
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: 1fr 1fr;
-          grid-column: 1/3;
-          grid-row: 2/3; } }
-      @media (max-width: 478px) {
-        .featured-chalets-right {
-          grid-template-columns: 1fr;
-          grid-template-rows: auto; } }
-      .featured-chalets-right-card {
-        position: relative;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        background-color: #24272e; }
-        .featured-chalets-right-card__image {
-          height: 184px;
-          position: relative; }
-          .featured-chalets-right-card__image .img-overlay {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            background-image: linear-gradient(180deg, rgba(36, 39, 46, 0) 0%, #24272e 100%); }
-          .featured-chalets-right-card__image .f-img-1 {
-            width: 100%;
-            height: inherit;
-            background: url("/images/featured-image-1.png") no-repeat;
-            background-size: cover;
-            background-position: center; }
-          .featured-chalets-right-card__image .f-img-2 {
-            width: 100%;
-            height: inherit;
-            background: url("/images/featured-image-2.png") no-repeat;
-            background-size: cover;
-            background-position: center; }
-          .featured-chalets-right-card__image .f-img-3 {
-            width: 100%;
-            height: inherit;
-            background: url("/images/featured-image-3.png") no-repeat;
-            background-size: cover;
-            background-position: center; }
-          .featured-chalets-right-card__image .f-img-4 {
-            width: 100%;
-            height: inherit;
-            background: url("/images/featured-image-4.png") no-repeat;
-            background-size: cover;
-            background-position: center; }
-        .featured-chalets-right-card__body {
-          background: #24272e;
-          height: 113px;
-          padding: 3rem; }
-          .featured-chalets-right-card__body h3 {
-            font-family: 'Spectral', serif;
-            font-size: 20px;
-            line-height: 1;
-            color: white; }
-          .featured-chalets-right-card__body p {
-            font-size: 1.2rem;
-            height: 22px;
-            overflow: hidden;
-            color: #edcb9b; }
-          .featured-chalets-right-card__body span {
-            color: white;
-            font-size: 1.2rem; }
-        .featured-chalets-right-card__price {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          width: 100%;
-          margin: 0 auto;
-          position: absolute;
-          top: 50%; }
-          .featured-chalets-right-card__price span {
-            font-size: 20px;
-            font-family: 'Spectral', serif;
-            color: white;
-            margin-left: 20px; }
-          .featured-chalets-right-card__price .tag {
-            width: 50%;
-            color: #edcb9b;
-            font-size: 14px;
-            text-align: center;
-            background-color: #5c5f6d;
-            height: 30px; }
-
-.contact-form {
-  width: 100%;
-  height: 80%;
-  background: #24272e;
-  padding: 4rem 0; }
-  .contact-form__heading {
+.listing__card {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #24272e; }
+  .listing__card-image {
+    height: 184px;
     position: relative; }
-    .contact-form__heading h3 {
-      display: block;
-      text-align: center;
-      font-family: 'Spectral', serif;
-      font-size: 34px;
-      color: white;
-      padding: 4rem 0; }
-  .contact-form form {
-    width: 70%;
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 24px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 68px 68px 1fr 72px; }
-    @media (max-width: 360px) {
-      .contact-form form {
-        grid-template-columns: 1fr;
-        grid-template-rows: 68px 68px 68px 1fr 72px; } }
-    .contact-form form input {
-      background: transparent;
-      border: 1px solid #edcb9b;
-      padding-left: 20px; }
-      .contact-form form input::placeholder {
-        color: white;
-        font-size: 16px; }
-      .contact-form form input .form-text {
-        grid-column: 1/2;
-        grid-row: 1/2; }
-        @media (max-width: 360px) {
-          .contact-form form input .form-text {
-            grid-column: 1/2; } }
-    .contact-form form .form-email {
-      grid-column: 2/3;
-      grid-row: 1/2; }
-      @media (max-width: 360px) {
-        .contact-form form .form-email {
-          grid-column: 1/2;
-          grid-row: 2/3; } }
-    .contact-form form .form-subject {
-      grid-column: 1/3;
-      grid-row: 2/3; }
-      @media (max-width: 360px) {
-        .contact-form form .form-subject {
-          grid-column: 1/2;
-          grid-row: 3/4; } }
-    .contact-form form textarea {
-      background: transparent;
-      border: 1px solid #edcb9b;
-      padding-left: 20px;
-      padding-top: 20px;
-      grid-column: 1/3;
-      grid-row: 3/4; }
-      @media (max-width: 360px) {
-        .contact-form form textarea {
-          grid-column: 1/2;
-          grid-row: 4/5; } }
-      .contact-form form textarea::placeholder {
-        color: white; }
-    .contact-form form button {
-      grid-column: 1/3;
-      grid-row: 4/5;
-      width: 80%;
-      margin: 0 auto;
-      width: 160px;
-      height: 48px;
-      border: none;
-      background-color: #edcb9b;
-      font-size: 16px;
-      transition: all 0.3s ease-in-out;
-      cursor: pointer; }
-      .contact-form form button:hover {
-        background-color: #e5b570; }
-      @media (max-width: 360px) {
-        .contact-form form button {
-          grid-column: 1/2;
-          grid-row: 5/6;
-          width: 200px; } }
-
-footer {
-  height: 146px;
-  background: #24272e;
-  border-top: 1px solid #edcb9b; }
-  footer .footer-wrapper {
-    height: 100%;
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    @media (max-width: 360px) {
-      footer .footer-wrapper {
-        flex-direction: column;
-        padding: 30px 0; } }
-    footer .footer-wrapper .footer-right {
-      font-size: 16px;
-      color: white; }
-    footer .footer-wrapper .footer-left-location {
-      font-size: 16px;
-      color: white; }
-
-.header {
-  background: #24272e; }
-  .header .listing-header {
-    padding-top: 84px;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    position: relative; }
-    .header .listing-header .header-overlay {
+    .listing__card-image .img-overlay {
       position: absolute;
       bottom: 0;
       width: 100%;
       height: 100%;
       background-image: linear-gradient(180deg, rgba(36, 39, 46, 0) 0%, #24272e 100%); }
-      .header .listing-header .header-overlay h2 {
-        position: absolute;
-        left: 33%;
-        bottom: 20%;
-        font-size: 50px;
-        color: white;
-        font-family: 'Spectral', serif;
-        font-weight: 300;
-        text-align: center;
-        width: 35%;
-        border: 1px solid #edcb9b; }
-        @media (max-width: 1074px) {
-          .header .listing-header .header-overlay h2 {
-            font-size: 40px; } }
-        @media (max-width: 860px) {
-          .header .listing-header .header-overlay h2 {
-            font-size: 30px; } }
-        @media (max-width: 648px) {
-          .header .listing-header .header-overlay h2 {
-            font-size: 20px; } }
-        @media (max-width: 648px) {
-          .header .listing-header .header-overlay h2 {
-            width: 50%;
-            left: 25%; } }
-        @media (max-width: 360px) {
-          .header .listing-header .header-overlay h2 {
-            left: 10%; } }
-    .header .listing-header img {
+    .listing__card-image .f-img-1 {
       width: 100%;
-      height: 100%;
-      object-fit: cover; }
-
-.listing-cards {
-  padding: 84px 0;
-  width: 90%;
-  margin: 0 auto;
-  grid-gap: 24px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto; }
-  @media (max-width: 1074px) {
-    .listing-cards {
-      grid-template-columns: repeat(3, 1fr); } }
-  @media (max-width: 768px) {
-    .listing-cards {
-      grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 468px) {
-    .listing-cards {
-      grid-template-columns: 1fr; } }
-  @media (max-width: 360px) {
-    .listing-cards {
-      grid-template-columns: repeat(1, 1fr); } }
+      height: inherit;
+      background: url("/images/featured-image-1.png") no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .listing__card-image .f-img-2 {
+      width: 100%;
+      height: inherit;
+      background: url("/images/featured-image-2.png") no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .listing__card-image .f-img-3 {
+      width: 100%;
+      height: inherit;
+      background: url("/images/featured-image-3.png") no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .listing__card-image .f-img-4 {
+      width: 100%;
+      height: inherit;
+      background: url("/images/featured-image-4.png") no-repeat;
+      background-size: cover;
+      background-position: center; }
+  .listing__card-body {
+    background: #24272e;
+    height: 113px;
+    padding: 3rem; }
+    .listing__card-body h3 {
+      font-family: 'Spectral', serif;
+      font-size: 20px;
+      line-height: 1;
+      color: white; }
+    .listing__card-body p {
+      font-size: 1.2rem;
+      height: 22px;
+      overflow: hidden;
+      color: #edcb9b; }
+    .listing__card-body span {
+      color: white;
+      font-size: 1.2rem; }
+  .listing__card-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%; }
+    .listing__card-price span {
+      font-size: 20px;
+      font-family: 'Spectral', serif;
+      color: white;
+      margin-left: 20px; }
+    .listing__card-price .tag {
+      width: 50%;
+      color: #edcb9b;
+      font-size: 14px;
+      text-align: center;
+      background-color: #5c5f6d;
+      height: 30px; }
 
 .contact-form-page {
   padding-top: 20rem; }

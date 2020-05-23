@@ -1,0 +1,98 @@
+// HERO SECTION
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: $color-primary;
+  height: 60%;
+  position: relative;
+  padding-top: 86px;
+  @include media('<=phone') {
+    font-size: 40px;
+    grid-template-columns: 1fr;
+  }
+  @include media('<=phone') {
+    padding-top: 43px;
+  }
+
+  &__left {
+    grid-column: 1/2;
+    height: 60vh;
+    background-color: $color-primary;
+    @include flexbox;
+    @include flex-direction(column);
+    @include center(center);
+    @include media('<=tablet', '<=medium') {
+      position: absolute;
+      left: 0;
+      height: 60vh;
+      bottom: 0rem;
+      width: 341px;
+      background-color: #24272ee3;
+    }
+    @include media('<=phone') {
+      width: 100%;
+    }
+    &-heading {
+      font-size: 50px;
+      font-weight: 300;
+      font-family: 'Spectral', serif;
+      color: white;
+      @include media('<=tablet') {
+        font-size: 40px;
+      }
+    }
+    &-location {
+      display: flex;
+      align-items: center;
+      p {
+        font-size: 24px;
+        color: $color-secondary;
+        margin-left: 10px;
+        @include media('<=tablet') {
+          font-size: 14px;
+        }
+      }
+    }
+    &-specs {
+      font-size: 24px;
+      color: white;
+      margin-bottom: 42px;
+      @include media('<=tablet') {
+        font-size: 16px;
+      }
+    }
+    &-button {
+      width: 194px;
+      background-color: $color-secondary;
+      height: 48px;
+      border: none;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: darken($color: #edcb9b, $amount: 10);
+      }
+      @include media('<=tablet') {
+        width: 200px;
+      }
+      a {
+        color: $color-primary;
+        font-size: 16px;
+      }
+    }
+  }
+  &__right {
+    grid-column: 2/3;
+    width: 100%;
+    height: 100%;
+    @include media('<=tablet') {
+      grid-column: 1/3;
+      height: 60vh;
+    }
+    &-image {
+      width: inherit;
+      height: inherit;
+      background: url('/images/hero-image.png'), no-repeat;
+      background-size: cover;
+    }
+  }
+}

@@ -4,14 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Niramit:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
     <title>For Sale</title>
   </head>
   <body>
@@ -19,44 +11,57 @@
       <!-- NAV SECTION -->
 
       <nav class="nav">
-        <div class="container flex space-between align-center h-100">
+        <div class="containerWrapper">
           <img src="./images/svg/logo.svg" alt="logo" class="logo" />
-          <ul class="nav-menu">
-            <li class="nav-menu-item">
-              <a href="/index.html" class="nav-menu-item-link">Home</a>
+          <ul class="nav__list">
+            <li class="nav__listItem">
+              <a href="/index.html" class="nav__listItemLink">Home</a>
             </li>
-            <li class="nav-menu-item">
-              <a href="/forsale.html" class="nav-menu-item-link">For Sale</a>
+            <li class="nav__listItem">
+              <a href="/forsale.html" class="nav__listItemLink">For Sale</a>
             </li>
-            <li class="nav-menu-item">
-              <a href="/forrent.html" class="nav-menu-item-link">For Rent</a>
+            <li class="nav__listItem">
+              <a href="/forrent.html" class="nav__listItemLink">For Rent</a>
             </li>
-            <li class="nav-menu-item">
-              <a href="/contact.html" class="nav-menu-item-link">Contact Us</a>
+            <li class="nav__listItem">
+              <a href="/contact.html" class="nav__listItemLink">Contact Us</a>
             </li>
           </ul>
         </div>
       </nav>
       <!-- END OF NAV SECTION -->
 
-       <!-- CONTACT FORM SECTION -->
+      <div class="listing-header">
+        <div class="header-overlay">
+          <h2>Contact Form</h2>
+        </div>
+        <img src="/images/header-image.jpg" alt="" />
+      </div>
+    </header>
 
-    <section class="contact-form contact-form-page">
-      <div class="contact-form__heading">
-        <h3>Contact Form</h3>
+    <!-- CONTACT FORM SECTION -->
+
+    <section class="contact__form">
+      <div class="contact__form-heading">
+        <h3>Enquire</h3>
       </div>
       <form action="">
-        <input type="text" placeholder="Your Name" class="form-text" />
-        <input type="email" placeholder="Email Address" class="form-email" />
-        <input type="text" class="form-subject" placeholder="Subject" />
+        <input type="text" placeholder="Your Name" class="form__input-text" />
+        <input
+          type="email"
+          placeholder="Email Address"
+          class="form__input-email"
+        />
+        <input type="text" placeholder="Subject" class="form__input-subject" />
         <textarea
           name=""
           id=""
           cols="30"
           rows="10"
           placeholder="How can we help you?"
+          class="form__input-textarea"
         ></textarea>
-        <button>Submit</button>
+        <button class="form__input-btn">Submit</button>
       </form>
     </section>
 
@@ -65,14 +70,14 @@
     <!-- FOOTER SECTION -->
 
     <footer>
-      <div class="footer-wrapper">
-        <div class="footer-left">
-          <div class="footer-left-logo">
+      <div class="footerWrapper">
+        <div class="footer__left">
+          <div class="footer__left-logo">
             <img src="/images/svg/logo.svg" alt="" />
           </div>
-          <div class="footer-left-location"><p>Aspen, Colorado</p></div>
+          <div class="footer__left-location"><p>Aspen, Colorado</p></div>
         </div>
-        <div class="footer-right">
+        <div class="footer__right">
           <p>&copy; 2019 Chalets and Caviar.Made with ❤️</p>
         </div>
       </div>
@@ -81,4 +86,3 @@
     <!-- END OF FOOTER SECTION -->
   </body>
 </html>
-

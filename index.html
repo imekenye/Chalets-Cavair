@@ -4,14 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Niramit:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
     <title>Homepage</title>
   </head>
   <body>
@@ -19,20 +11,20 @@
       <!-- NAV SECTION -->
 
       <nav class="nav">
-        <div class="container flex space-between align-center h-100">
+        <div class="containerWrapper">
           <img src="./images/svg/logo.svg" alt="logo" class="logo" />
-          <ul class="nav-menu">
-            <li class="nav-menu-item">
-              <a href="/index.html" class="nav-menu-item-link">Home</a>
+          <ul class="nav__list">
+            <li class="nav__listItem">
+              <a href="/index.html" class="nav__listItemLink">Home</a>
             </li>
-            <li class="nav-menu-item">
-              <a href="/forsale.html" class="nav-menu-item-link">For Sale</a>
+            <li class="nav__listItem">
+              <a href="/forsale.html" class="nav__listItemLink">For Sale</a>
             </li>
-            <li class="nav-menu-item">
-              <a href="/forrent.html" class="nav-menu-item-link">For Rent</a>
+            <li class="nav__listItem">
+              <a href="/forrent.html" class="nav__listItemLink">For Rent</a>
             </li>
-            <li class="nav-menu-item">
-              <a href="/contact.html" class="nav-menu-item-link">Contact Us</a>
+            <li class="nav__listItem">
+              <a href="/contact.html" class="nav__listItemLink">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -42,30 +34,30 @@
       <!-- HERO SECTION -->
 
       <div class="hero">
-        <div class="hero-left flex flex-column center">
-          <h1 class="hero-left__heading">Chalet Frost</h1>
-          <div class="hero-left__location flex align-center">
+        <div class="hero__left">
+          <h1 class="hero__left-heading">Chalet Frost</h1>
+          <div class="hero__left-location">
             <img src="/images/svg/hero-location.svg" alt="location" />
             <p>651 Pfister Dr, Aspen, Co 81611</p>
           </div>
-          <p class="hero-left__specs">
+          <p class="hero__left-specs">
             8 bd | 11 ba | 13,690 sqft
           </p>
-          <button class="hero-left__button">
-            <a href="/" class="hero-left__button-link">View Chalet</a>
+          <button class="hero__left-button">
+            <a href="/" class="hero__left-button-link">View Chalet</a>
           </button>
         </div>
-        <div class="hero-right">
-          <div class="hero-right__image">
+        <div class="hero__right">
+          <div class="hero__right-image">
             <!-- <img src="/images/hero-image.png" alt="" /> -->
           </div>
         </div>
       </div>
-      <div class="gallery container">
-        <div class="gallery-image__one"></div>
-        <div class="gallery-image__two"></div>
-        <div class="gallery-image__three"></div>
-        <div class="gallery-image__four"></div>
+      <div class="gallery wrapper">
+        <div class="gallery__image-one"></div>
+        <div class="gallery__image-two"></div>
+        <div class="gallery__image-three"></div>
+        <div class="gallery__image-four"></div>
       </div>
     </header>
 
@@ -151,80 +143,80 @@
     <!-- FEATURED CHALETS SECTION -->
 
     <section class="featured">
-      <div class="featured-heading">
+      <div class="featured__heading">
         <h1>Featured chalets</h1>
-        <div class="rect-featured"></div>
+        <div class="featured__heading-rect"></div>
       </div>
 
-      <div class="featured-chalets">
-        <div class="featured-chalets-left">
-          <div class="featured-chalets-left__image"></div>
-          <div class="featured-chalets-left__body">
+      <div class="featured__chalets">
+        <div class="featured__chaletsLeft">
+          <div class="featured__chaletsLeft-image"></div>
+          <div class="featured__chaletsLeft-body">
             <span class="price">$22,800,000</span>
             <h3>Chalet Frost</h3>
             <p>651 Pfister Dr, Aspen, Co 81611</p>
             <span>8 bd | 11 ba | 13,390 sqft</span>
           </div>
         </div>
-        <div class="featured-chalets-right">
-          <div class="featured-chalets-right-card card-one">
-            <div class="featured-chalets-right-card__image">
+        <div class="featured__chaletsRight">
+          <div class="listing__card">
+            <div class="listing__card-image">
               <div class="img-overlay"></div>
               <div class="f-img-1"></div>
             </div>
-            <div class="featured-chalets-right-card__price">
+            <div class="listing__card-price">
               <span>$22,800,000</span>
               <div class="tag">For Sale</div>
             </div>
-            <div class="featured-chalets-right-card__body">
+            <div class="listing__card-body">
               <h3>Chalet Dalmat</h3>
               <p>651 Pfister Dr, Aspen, Co 81611</p>
               <span>8 bd | 11 ba | 13,390 sqft</span>
             </div>
           </div>
 
-          <div class="featured-chalets-right-card card-two">
-            <div class="featured-chalets-right-card__image">
+          <div class="listing__card">
+            <div class="listing__card-image">
               <div class="img-overlay"></div>
               <div class="f-img-2"></div>
             </div>
-            <div class="featured-chalets-right-card__price">
+            <div class="listing__card-price">
               <span>$22,800,000</span>
               <div class="tag">For Sale</div>
             </div>
-            <div class="featured-chalets-right-card__body">
+            <div class="listing__card-body">
               <h3>Chalet Dalmat</h3>
               <p>651 Pfister Dr, Aspen, Co 81611</p>
               <span>8 bd | 11 ba | 13,390 sqft</span>
             </div>
           </div>
 
-          <div class="featured-chalets-right-card card-three">
-            <div class="featured-chalets-right-card__image">
+          <div class="listing__card">
+            <div class="listing__card-image">
               <div class="img-overlay"></div>
               <div class="f-img-3"></div>
             </div>
-            <div class="featured-chalets-right-card__price">
+            <div class="listing__card-price">
               <span>$22,800,000</span>
               <div class="tag">For Sale</div>
             </div>
-            <div class="featured-chalets-right-card__body">
+            <div class="listing__card-body">
               <h3>Chalet Dalmat</h3>
               <p>651 Pfister Dr, Aspen, Co 81611</p>
               <span>8 bd | 11 ba | 13,390 sqft</span>
             </div>
           </div>
 
-          <div class="featured-chalets-right-card card-four">
-            <div class="featured-chalets-right-card__image">
+          <div class="listing__card">
+            <div class="listing__card-image">
               <div class="img-overlay"></div>
               <div class="f-img-4"></div>
             </div>
-            <div class="featured-chalets-right-card__price">
+            <div class="listing__card-price">
               <span>$22,800,000</span>
               <div class="tag">For Sale</div>
             </div>
-            <div class="featured-chalets-right-card__body">
+            <div class="listing__card-body">
               <h3>Chalet Dalmat</h3>
               <p>651 Pfister Dr, Aspen, Co 81611</p>
               <span>8 bd | 11 ba | 13,390 sqft</span>
@@ -238,22 +230,27 @@
 
     <!-- CONTACT FORM SECTION -->
 
-    <section class="contact-form">
-      <div class="contact-form__heading">
+    <section class="enquiry__form">
+      <div class="enquiry__form-heading">
         <h3>Enquire</h3>
       </div>
       <form action="">
-        <input type="text" placeholder="Your Name" class="form-text" />
-        <input type="email" placeholder="Email Address" class="form-email" />
-        <input type="text" class="form-subject" placeholder="Subject" />
+        <input type="text" placeholder="Your Name" class="form__input-text" />
+        <input
+          type="email"
+          placeholder="Email Address"
+          class="form__input-email"
+        />
+        <input type="text" placeholder="Subject" class="form__input-subject" />
         <textarea
           name=""
           id=""
           cols="30"
           rows="10"
           placeholder="How can we help you?"
+          class="form__input-textarea"
         ></textarea>
-        <button>Submit</button>
+        <button class="form__input-btn">Submit</button>
       </form>
     </section>
 
@@ -262,14 +259,14 @@
     <!-- FOOTER SECTION -->
 
     <footer>
-      <div class="footer-wrapper">
-        <div class="footer-left">
-          <div class="footer-left-logo">
+      <div class="footerWrapper">
+        <div class="footer__left">
+          <div class="footer__left-logo">
             <img src="/images/svg/logo.svg" alt="" />
           </div>
-          <div class="footer-left-location"><p>Aspen, Colorado</p></div>
+          <div class="footer__left-location"><p>Aspen, Colorado</p></div>
         </div>
-        <div class="footer-right">
+        <div class="footer__right">
           <p>&copy; 2019 Chalets and Caviar.Made with ❤️</p>
         </div>
       </div>
