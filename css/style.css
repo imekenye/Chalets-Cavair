@@ -191,6 +191,7 @@ a {
     .contact__form form textarea {
       background: transparent;
       border: 1px solid #24272e;
+      font-size: 14px;
       padding-left: 20px;
       padding-top: 20px; }
       .contact__form form textarea::placeholder {
@@ -237,6 +238,238 @@ a {
   @media (max-width: 360px) {
     .forsale__chalets {
       grid-template-columns: repeat(1, 1fr); } }
+
+.wrapper__404 {
+  margin: 0 auto;
+  max-width: 90%;
+  height: 100vh; }
+
+.notfound {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 30vh;
+  background: #24272e;
+  margin: 10% auto; }
+  @media (max-width: 784px) {
+    .notfound {
+      text-align: center;
+      flex-direction: column; } }
+  @media (max-width: 784px) {
+    .notfound__left {
+      height: 150px; } }
+  .notfound__left h1 {
+    font-family: "Spectral", serif;
+    font-weight: 200;
+    font-size: 98px;
+    line-height: 194px;
+    color: white;
+    margin-right: 30px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
+  .notfound__right p {
+    font-family: "Spectral", serif;
+    font-weight: 200;
+    font-size: 24px;
+    color: white;
+    line-height: 36px;
+    margin-bottom: 10px; }
+    @media (max-width: 784px) {
+      .notfound__right p {
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px; } }
+  .notfound__right button {
+    width: 258px;
+    height: 48px;
+    background-color: #edcb9b;
+    border: none; }
+    @media (max-width: 360px) {
+      .notfound__right button {
+        width: 200px; } }
+    .notfound__right button:hover {
+      background-color: #e5b570; }
+    .notfound__right button a {
+      font-size: 16px;
+      font-family: "Niramit", sans-serif;
+      color: #24272e; }
+
+.singleWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto; }
+  .singleWrapper__nav {
+    display: flex;
+    width: 100%;
+    padding: 32px; }
+    .singleWrapper__nav a {
+      color: #24272e;
+      margin-left: 20px; }
+  .singleWrapper__overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px; }
+    @media (max-width: 768px) {
+      .singleWrapper__overview {
+        grid-template-columns: 1fr; } }
+    .singleWrapper__overview-images .mainImage {
+      height: 424px;
+      width: 100%;
+      background: url("/images/single-main.jpg") no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .singleWrapper__overview-images .gallery__images {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin: 24px 0;
+      grid-gap: 24px;
+      height: 104px; }
+      .singleWrapper__overview-images .gallery__images-1 {
+        background: url(/images/single-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center; }
+      .singleWrapper__overview-images .gallery__images-2 {
+        background: url(/images/single-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center; }
+      .singleWrapper__overview-images .gallery__images-3 {
+        background: url(/images/single-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center; }
+    .singleWrapper__overview-details .specs {
+      height: 112px;
+      background-color: #24272e;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px 0; }
+      .singleWrapper__overview-details .specs .price {
+        display: flex;
+        flex-direction: column;
+        height: 100%; }
+        .singleWrapper__overview-details .specs .price__icon {
+          width: 100%;
+          height: 100%;
+          background: url("/images/svg/money.svg") no-repeat;
+          background-size: contain; }
+        .singleWrapper__overview-details .specs .price__text {
+          font-size: 16px;
+          font-family: "Spectral", serif;
+          color: white; }
+      .singleWrapper__overview-details .specs .baths {
+        display: flex;
+        flex-direction: column;
+        height: 100%; }
+        .singleWrapper__overview-details .specs .baths__icon {
+          width: 100%;
+          height: 100%;
+          background: url("/images/svg/bathroom.svg") no-repeat;
+          background-size: contain; }
+        .singleWrapper__overview-details .specs .baths__text {
+          font-size: 16px;
+          font-family: "Spectral", serif;
+          color: white; }
+      .singleWrapper__overview-details .specs .beds {
+        display: flex;
+        flex-direction: column;
+        height: 100%; }
+        .singleWrapper__overview-details .specs .beds__icon {
+          width: 100%;
+          height: 100%;
+          background: url("/images/svg/bed.svg") no-repeat;
+          background-size: contain; }
+        .singleWrapper__overview-details .specs .beds__text {
+          font-size: 16px;
+          font-family: "Spectral", serif;
+          color: white; }
+      .singleWrapper__overview-details .specs .beds {
+        display: flex;
+        flex-direction: column;
+        height: 100%; }
+        .singleWrapper__overview-details .specs .beds__icon {
+          width: 100%;
+          height: 100%;
+          background: url("/images/svg/bed.svg") no-repeat;
+          background-size: contain; }
+        .singleWrapper__overview-details .specs .beds__text {
+          font-size: 16px;
+          font-family: "Spectral", serif;
+          color: white; }
+      .singleWrapper__overview-details .specs .sqft {
+        display: flex;
+        flex-direction: column;
+        height: 100%; }
+        .singleWrapper__overview-details .specs .sqft__icon {
+          width: 100%;
+          height: 100%;
+          background: url("/images/svg/measure.svg") no-repeat;
+          background-size: contain; }
+        .singleWrapper__overview-details .specs .sqft__text {
+          font-size: 16px;
+          font-family: "Spectral", serif;
+          color: white; }
+    .singleWrapper__overview .overview h2 {
+      font-size: 24px;
+      font-family: "Spectral", serif;
+      color: #24272e;
+      padding: 32px 0 16px 0; }
+    .singleWrapper__overview .features__heading {
+      font-size: 24px;
+      font-family: "Spectral", serif;
+      color: #24272e;
+      padding: 32px 0 16px 0; }
+    .singleWrapper__overview .features__details {
+      width: 100%;
+      display: grid;
+      grid-gap: 8px;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: space-between; }
+      @media (max-width: 360px) {
+        .singleWrapper__overview .features__details {
+          grid-template-columns: 1fr 1fr; } }
+      .singleWrapper__overview .features__details span {
+        margin-right: 8px; }
+      .singleWrapper__overview .features__details .bold {
+        font-weight: bold; }
+  .singleWrapper .similar__chalets {
+    margin-top: 100px; }
+    .singleWrapper .similar__chalets-heading {
+      display: flex;
+      align-items: center;
+      padding: 16px 0; }
+      .singleWrapper .similar__chalets-heading .left__rec {
+        width: 72px;
+        height: 38px;
+        background: #edcb9b;
+        margin-right: 10px; }
+      .singleWrapper .similar__chalets-heading h1 {
+        font-family: "Spectral", serif;
+        font-weight: 300;
+        color: #24272e;
+        font-size: 42px;
+        line-height: 48px; }
+        @media (max-width: 360px) {
+          .singleWrapper .similar__chalets-heading h1 {
+            font-size: 32px; } }
+    .singleWrapper .similar__chalets-listings {
+      display: grid;
+      grid-gap: 24px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      margin-bottom: 122px; }
+      @media (max-width: 768px) {
+        .singleWrapper .similar__chalets-listings {
+          grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 360px) {
+        .singleWrapper .similar__chalets-listings {
+          grid-template-columns: 1fr; } }
 
 .hero {
   display: grid;
@@ -787,6 +1020,7 @@ a {
     .enquiry__form form textarea {
       background: transparent;
       border: 1px solid #edcb9b;
+      font-size: 14px;
       padding-left: 20px;
       padding-top: 20px; }
       .enquiry__form form textarea::placeholder {
@@ -1059,5 +1293,14 @@ a {
       background-color: #5c5f6d;
       height: 30px; }
 
-.contact-form-page {
-  padding-top: 20rem; }
+.search-form__left {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 1fr 1fr;
+  margin-right: 24px; }
+
+.search__section {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 50px 0; }
