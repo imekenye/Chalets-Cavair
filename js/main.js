@@ -209,3 +209,29 @@ document.addEventListener('click', closeAllSelect);
   // Init Component
   init();
 })(window, document);
+
+// ANIMATION
+
+gsap.fromTo(
+  '.nav',
+  { y: -200, opacity: 0 },
+  { duration: 1, delay: 0.8, y: 0, opacity: 1 }
+);
+gsap.fromTo(
+  '.hero',
+  { y: -200, opacity: 0 },
+  { duration: 0.5, delay: 0.5, y: 0, opacity: 1, ease: 'power4. out' }
+);
+gsap.fromTo(
+  '.hero__right-image',
+  { x: -600, opacity: 0 },
+  { duration: 0.8, delay: 1, x: 0, opacity: 1, ease: 'power4. out' }
+);
+
+// gallery animation
+
+gsap.fromTo(
+  '.g-img',
+  { x: -600, opacity: 0, scale: 1.5 },
+  { duration: 0.8, delay: 1, scale: 1, x: 0, opacity: 1, ease: 'power4. out' }
+);
